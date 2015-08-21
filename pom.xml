@@ -35,7 +35,9 @@
     </properties>
 
     <modules>
-
+        <module>1_Introduction</module>
+        <module>2_Fuse_Container</module>
+        <module>3_OSGI_Development_Deployment</module>
     </modules>
 
     <dependencyManagement>
@@ -72,16 +74,16 @@
             </dependency>
 
             <!-- CXF -->
-            <!--            <dependency>
-                            <groupId>org.apache.cxf</groupId>
-                            <artifactId>cxf-api</artifactId>
-                            <version>${cxf.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.apache.cxf</groupId>
-                            <artifactId>cxf-rt-core</artifactId>
-                            <version>${cxf.version}</version>
-                        </dependency>-->
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-api</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-core</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
 
             <!-- OSGI, Pax EXAM & Karaf-->
             <dependency>
@@ -162,6 +164,14 @@
                 <artifactId>jetty-client</artifactId>
                 <version>${jetty.version}</version>
             </dependency>
+
+            <!-- Project -->
+            <dependency>
+                <groupId>com.redhat.gpe.training</groupId>
+                <artifactId>osgi-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
