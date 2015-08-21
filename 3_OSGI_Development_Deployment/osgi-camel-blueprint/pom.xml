@@ -3,20 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>osgi-lab-1-project</artifactId>
+        <artifactId>osgi-lab-3-project</artifactId>
         <groupId>com.redhat.gpe.training</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>osgi-client</artifactId>
-    <name>RedHat GPE Training :: OSGi :: Lab :: 1 :: Greeter Client</name>
+    <artifactId>osgi-camel-blueprint</artifactId>
+    <name>RedHat GPE Training :: OSGi :: Lab :: 3 :: Camel Blueprint</name>
     <packaging>bundle</packaging>
 
     <properties>
         <!-- Fabric8 -->
-        <fabric8.profile>gpe-exercise-client</fabric8.profile>
-        <fabric8.parentProfiles>fabric</fabric8.parentProfiles>
+        <fabric8.profile>gpe-exercise-camel</fabric8.profile>
+        <fabric8.parentProfiles>feature-camel</fabric8.parentProfiles>
+        <fabric8.features>camel</fabric8.features>
         <!-- Openshift -->
         <!-- <fabric8.jolokiaUrl>http://demo-fuse.apps.ose.opentlc.com/jolokia</fabric8.jolokiaUrl> -->
         <!-- Local -->
@@ -29,20 +30,20 @@
             <artifactId>osgi-service</artifactId>
         </dependency>
 
-        <!-- OSGI -->
+        <!-- Camel -->
         <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr</artifactId>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr.annotations</artifactId>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-blueprint</artifactId>
         </dependency>
 
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
+            <artifactId>slf4j-log4j12</artifactId>
         </dependency>
     </dependencies>
 
@@ -54,27 +55,13 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Private-Package>com.redhat.training.pojo</Private-Package>
                         <Import-Package>
+                            com.redhat.gpe.training.osgi.service,
                             *
                         </Import-Package>
                     </instructions>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-scr-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>scr</goal>
-                        </goals>
-                        <configuration>
-                            <specVersion>1.2</specVersion>
-                            <strictMode>false</strictMode>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>io.fabric8</groupId>

@@ -3,27 +3,32 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>osgi-lab-1-project</artifactId>
+        <artifactId>osgi-lab-3-project</artifactId>
         <groupId>com.redhat.gpe.training</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>osgi-service</artifactId>
-    <name>RedHat GPE Training :: OSGi :: Lab :: 1 :: Greeter Service</name>
+    <artifactId>osgi-camel-scr</artifactId>
+    <name>RedHat GPE Training :: OSGi :: Lab :: 3 :: Camel SCR</name>
     <packaging>bundle</packaging>
 
-    <properties>
-        <!-- Fabric8 -->
-        <fabric8.profile>gpe-exercise-service</fabric8.profile>
-        <fabric8.parentProfiles>fabric</fabric8.parentProfiles>
-        <!-- Openshift -->
-        <!-- <fabric8.jolokiaUrl>http://demo-fuse.apps.ose.opentlc.com/jolokia</fabric8.jolokiaUrl> -->
-        <!-- Local -->
-        <fabric8.jolokiaUrl>http://localhost:8181/jolokia</fabric8.jolokiaUrl>
-    </properties>
-
     <dependencies>
+        <dependency>
+            <groupId>com.redhat.gpe.training</groupId>
+            <artifactId>osgi-service</artifactId>
+        </dependency>
+
+        <!-- Camel -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-scr</artifactId>
+        </dependency>
+
         <!-- OSGI -->
         <dependency>
             <groupId>org.apache.felix</groupId>
@@ -37,7 +42,7 @@
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
+            <artifactId>slf4j-log4j12</artifactId>
         </dependency>
     </dependencies>
 
@@ -49,15 +54,13 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Export-Package>
-                            !com.redhat.gpe.training.osgi.service.impl,
-                            com.redhat.gpe.training.osgi.service
-                        </Export-Package>
                         <Private-Package>
-                            com.redhat.gpe.training.osgi.service.impl
+                            com.redhat.gpe.training.osgi,
+                            com.redhat.gpe.training.osgi.camel
                         </Private-Package>
-                        <Import-Package>*</Import-Package>
-                        <Export-Service>com.redhat.gpe.training.osgi.service.Greeter</Export-Service>
+                        <Import-Package>
+                            *
+                        </Import-Package>
                     </instructions>
                 </configuration>
             </plugin>
@@ -76,10 +79,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>fabric8-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
