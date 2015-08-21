@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.redhat.gpe.training</groupId>
-    <artifactId>camel</artifactId>
+    <artifactId>osgi</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
-    <name>RedHat GPE Training :: Camel Project Exercise</name>
+    <name>RedHat GPE Training :: OSGI Project Exercise</name>
 
     <properties>
         <jboss.fuse.bom.version>6.2.0.redhat-121</jboss.fuse.bom.version>
@@ -35,14 +35,7 @@
     </properties>
 
     <modules>
-        <module>2_Core_Engine</module>
-        <module>3_Core_Features</module>
-        <module>4_Camel_Project_Development</module>
-        <module>5_Components</module>
-        <module>6_EIP_Patterns</module>
-        <module>7_Advanced_features</module>
-        <module>8_Modularity</module>
-        <module>9_Fabric</module>
+
     </modules>
 
     <dependencyManagement>
