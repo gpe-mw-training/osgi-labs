@@ -18,88 +18,8 @@
           </snapshots>
         </repository>
         <repository>
-          <id>jboss-public-group</id>
-          <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
           <id>jboss-public-repository</id>
           <url>http://repository.jboss.org/nexus/content/repositories/public/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>fusesource-public-repository</id>
-          <url>http://repository.jboss.org/nexus/content/repositories/fs-public/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>jboss-publicjboss-repository</id>
-          <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>jboss-ea-group</id>
-          <url>http://repository.jboss.org/nexus/content/groups/ea/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>jboss-releases-repository</id>
-          <url>http://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>maven2-repository</id>
-          <url>http://repo1.maven.org/maven2/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>apache-maven2-repository</id>
-          <url>http://repo.maven.apache.org/maven2/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>apache-servicemix-repository</id>
-          <url>http://svn.apache.org/repos/asf/servicemix/m2-repo</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -119,89 +39,9 @@
             <enabled>false</enabled>
           </snapshots>
         </pluginRepository>
-          <pluginRepository>
-            <id>jboss-ga-plugin-group</id>
-            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-            <releases>
-              <enabled>true</enabled>
-            </releases>
-            <snapshots>
-              <enabled>false</enabled>
-            </snapshots>
-          </pluginRepository>
         <pluginRepository>
           <id>jboss-public-plugin-repository</id>
           <url>http://repository.jboss.org/nexus/content/repositories/public/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-          <id>fusesource-public-plugin-repository</id>
-          <url>http://repository.jboss.org/nexus/content/repositories/fs-public/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-          <id>jboss-publicjboss-plugin-group</id>
-          <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-          <id>jboss-ea-plugin-group</id>
-          <url>http://repository.jboss.org/nexus/content/groups/ea/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-          <id>jboss-releases-plugin-repository</id>
-          <url>http://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-          <id>maven2-plugin-repository</id>
-          <url>http://repo1.maven.org/maven2/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-          <id>apache-maven2-plugin-repository</id>
-          <url>http://repo.maven.apache.org/maven2/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-          <id>apache-servicemix-plugin-repository</id>
-          <url>http://svn.apache.org/repos/asf/servicemix/m2-repo</url>
           <releases>
             <enabled>true</enabled>
           </releases>
