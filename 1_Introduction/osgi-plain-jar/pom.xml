@@ -26,7 +26,6 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
-                <version>1.1.0.CR5</version>
                 <configuration>
                     <profile>gpe-exercise-plainjar</profile>
                     <parentProfiles>default</parentProfiles>
