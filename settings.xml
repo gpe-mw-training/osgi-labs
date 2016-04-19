@@ -1,6 +1,13 @@
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+<servers>
+<server>
+<id>fabric8.upload.repo</id>
+<username>admin</username>
+<password>admin</password>
+</server>
+</servers>
 
   <profiles>
     <!-- Profile with online repositories required by Fuse -->
@@ -17,14 +24,13 @@
             <enabled>false</enabled>
           </snapshots>
         </repository>
-        <repository>
+
+      <repository>
           <id>jboss-public-repository</id>
           <url>http://repository.jboss.org/nexus/content/repositories/public/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
           <snapshots>
             <enabled>false</enabled>
+            <updatePolicy>daily</updatePolicy>
           </snapshots>
         </repository>
       </repositories>
@@ -39,16 +45,48 @@
             <enabled>false</enabled>
           </snapshots>
         </pluginRepository>
-        <pluginRepository>
-          <id>jboss-public-plugin-repository</id>
+
+     <pluginRepository>
+          <id>jboss-public-repository</id>
           <url>http://repository.jboss.org/nexus/content/repositories/public/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
           <snapshots>
             <enabled>false</enabled>
+            <updatePolicy>daily</updatePolicy>
           </snapshots>
         </pluginRepository>
+
+        <pluginRepository>
+        <id>fusesource.m2</id>
+        <name>FuseSource Community Release Repository</name>
+        <url>
+        https://repository.jboss.org/nexus/content/groups/fs-public/
+        </url>
+        <snapshots>
+        <enabled>false</enabled>
+        </snapshots>
+        <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+        </releases>
+        </pluginRepository>
+
+        <pluginRepository>
+        <id>fusesource.ea</id>
+        <name>
+        FuseSource Community Early Access Release Repository
+        </name>
+        <url>
+        https://repository.jboss.org/nexus/content/groups/ea/
+        </url>
+        <snapshots>
+        <enabled>false</enabled>
+        </snapshots>
+        <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+        </releases>
+        </pluginRepository>
+
       </pluginRepositories>
     </profile>
   </profiles>
@@ -57,5 +95,4 @@
     <!-- Activation of the Fuse profile -->
     <activeProfile>fuse-online-repos</activeProfile>
   </activeProfiles>
-
 </settings>
