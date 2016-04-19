@@ -118,6 +118,13 @@
                 <type>zip</type>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.apache.karaf.assemblies.features</groupId>
+                <artifactId>spring</artifactId>
+                <version>${karaf.version}</version>
+                <classifier>features</classifier>
+                <type>xml</type>
+            </dependency>
 
             <!-- Injection -->
             <dependency>
