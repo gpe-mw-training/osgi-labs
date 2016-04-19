@@ -57,7 +57,7 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- Dependency not defined in the BOM -->
+            <!-- Dependency not defined in the BOM files -->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
@@ -79,6 +79,13 @@
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-test-blueprint</artifactId>
                 <version>${camel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel.karaf</groupId>
+                <artifactId>apache-camel</artifactId>
+                <version>${camel.version}</version>
+                <classifier>features</classifier>
+                <type>xml</type>
             </dependency>
 
             <!-- CXF -->
