@@ -54,7 +54,7 @@ public class GreeterImpl implements Greeter {
 
     @Deactivate
     public void destroy() throws Exception {
-        LOGGER.info("Shutting down yhe Greeter Service ...");
+        LOGGER.info("Shutting down the Greeter Service ...");
     }
 
 }
