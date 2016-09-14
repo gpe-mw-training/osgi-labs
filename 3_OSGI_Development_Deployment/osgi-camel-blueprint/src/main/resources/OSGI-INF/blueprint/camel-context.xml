@@ -7,13 +7,12 @@
                http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
 
     <!-- OSGI blueprint property placeholder -->
-    <cm:property-placeholder id="myblueprint.placeholder" persistent-id="camel.blueprint"/>
 
     <reference id="greeterService" interface="com.redhat.gpe.training.osgi.service.Greeter"/>
 
     <camelContext id="exercise-camel-blueprint" trace="false" xmlns="http://camel.apache.org/schema/blueprint">
 
-        <propertyPlaceholder location="blueprint:myblueprint.placeholder"/>
+        <propertyPlaceholder location="com/redhat/gpe/param/camel.blueprint.properties"/>
 
         <!-- Route One -->
         <route id="fileToBean">
